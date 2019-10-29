@@ -1,14 +1,12 @@
 package com.example.homeworks
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
-import android.content.Intent.CATEGORY_APP_BROWSER
 import android.content.Intent.CATEGORY_DEFAULT
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 const val REQ_CODE = -1
 
