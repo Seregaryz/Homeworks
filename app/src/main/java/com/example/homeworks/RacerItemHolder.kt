@@ -20,7 +20,7 @@ class RacerItemHolder (
 
         itemView.setOnClickListener {
             clickLambda(racer.fullName, racer.age, racer.team,
-                racer.granPrix, racer.points, racer.imageId)
+                racer.grandPrix, racer.points, racer.imageId)
         }
     }
 

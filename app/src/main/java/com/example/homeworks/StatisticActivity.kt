@@ -15,33 +15,35 @@ class StatisticActivity : AppCompatActivity() {
         setContentView(R.layout.activity_stat)
 
         val racer = intent?.extras?.getString(FULL_NAME) ?: "Unknown"
-        val age = intent?.extras?.getInt(RACER_AGE) ?: "Unknown"
+        val age = intent?.extras?.getInt(RACER_AGE) ?: 20
         val team = intent?.extras?.getString(TEAM) ?: "Unknown"
-        val granPrix = intent?.extras?.getInt(GRANPRIX) ?: "Unknown"
-        val points = intent?.extras?.getInt(POINTS) ?: "Unknown"
-        val imageId = intent?.extras?.getInt(IMAGE_ID) ?: "Unknown"
+        val grandPrix = intent?.extras?.getInt(GRANDPRIX) ?: 0
+        val points = intent?.extras?.getInt(POINTS) ?: 0
+        val imageId = intent?.extras?.getInt(IMAGE_ID) ?: 10
 
         tv_name.text = racer
         tv_team.text = team
         tv_age_value.text = age.toString()
-        tv_grandprix_value.text = granPrix.toString()
+        tv_grandprix_value.text = grandPrix.toString()
+        tv_points_value.text = points.toString()
+        racer_img.setImageResource(imageId)
     }
 
     companion object {
         private const val FULL_NAME = "fullName"
         private const val RACER_AGE = "age"
         private const val TEAM = "team"
-        private const val GRANPRIX = "granPrix"
+        private const val GRANDPRIX = "granPrix"
         private const val POINTS = "points"
         private const val IMAGE_ID = "image"
 
-        fun createIntent(activity: Activity, fullName: String, age: Int, team: String, granPrix: Int,
+        fun createIntent(activity: Activity, fullName: String, age: Int, team: String, grandPrix: Int,
                          points: Int, imageId: Int) =
             Intent(activity, StatisticActivity::class.java).apply {
                 putExtra(FULL_NAME, fullName)
                 putExtra(RACER_AGE, age)
                 putExtra(TEAM, team)
-                putExtra(GRANPRIX, granPrix)
+                putExtra(GRANDPRIX, grandPrix)
                 putExtra(POINTS, points)
                 putExtra(IMAGE_ID, imageId)
             }

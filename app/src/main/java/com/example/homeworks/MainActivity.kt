@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter = RacerAdapter(getDataSource()) { fullName, age, team, granPrix, points, imageId ->
-            navigateToDesc(fullName, age, team, granPrix, points, imageId)
+        adapter = RacerAdapter(getDataSource()) { fullName, age, team, grandPrix, points, imageId ->
+            navigateToDesc(fullName, age, team, grandPrix, points, imageId)
         }
 
         rv_racers.adapter = adapter
@@ -32,18 +32,18 @@ class MainActivity : AppCompatActivity() {
         fullName: String,
         age: Int,
         team: String,
-        granPrix: Int,
+        grandPrix: Int,
         points: Int,
         imageId: Int
     ) {
         startActivity(StatisticActivity.createIntent(this, fullName, age, team,
-            granPrix, points, imageId))
+            grandPrix, points, imageId))
     }
 
 
     private fun getDataSource(): List<Racer> = arrayListOf(
         Racer(
-            "Daniil Kvyat", 25, "Scuderia Toro Roso",
+            "Daniil Kvyat", 25, "Scuderia Toro Rosso",
             92, 167, R.mipmap.kvyat
         ),
         Racer(
