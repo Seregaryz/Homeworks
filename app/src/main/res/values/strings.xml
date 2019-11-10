@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Homeworks</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_review">Person card</string>
+    <string name="menu_biography">Biography</string>
+    <string name="menu_statistic">Statistic</string>
+    <string name="menu_photo">Photo</string>
+    <string name="menu_football_card">FIFA card</string>
+    <string name="menu_funny_inform">Memes</string>
+    <string name="btn_fr_fourth">Move to other fragment</string>
+    <string name="first_fint_fr_fifth">first</string>
+    <string name="sec_hint_fr_fifth">second</string>
+    <string name="fr_fifth_desc">describe yourself in three words</string>
+    <string name="third_hint_fr_fifth">third</string>
 </resources>
