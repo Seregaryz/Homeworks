@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Homeworks</string>
+    <string name="title_racers">Racers</string>
+    <string name="title_racetracks">Racetracks</string>
+    <string name="title_home">Home</string>
+    <string name="racer_name">Daniil Kvyat</string>
+    <string name="racer_team">Toro Rosso</string>
+    <string name="temp_st_activity">Unknown</string>
+    <string name="et_hint_team_creating_dialog">Add team</string>
+    <string name="et_hint_name_creating_dialog">Add name</string>
+    <string name="et_hint_position">Add position</string>
 </resources>
