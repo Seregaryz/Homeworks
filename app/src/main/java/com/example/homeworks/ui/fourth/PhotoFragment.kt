@@ -28,13 +28,11 @@ class PhotoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View = inflater.inflate(R.layout.fragment_fourth, container, false)
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         btn_fr_fourth.setOnClickListener {
             listener?.onMoveListenerFromFourth()
         }
-
     }
 
     override fun onDetach() {
@@ -47,7 +45,6 @@ class PhotoFragment : Fragment() {
     }
 
     companion object {
-
         fun newInstance() : PhotoFragment = PhotoFragment()
     }
 

@@ -17,14 +17,12 @@ class BiographyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View = inflater.inflate(R.layout.fragment_second, container, false)
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val textView: TextView = tv_fr_second
     }
 
     companion object {
-
         fun newInstance() : BiographyFragment = BiographyFragment()
     }
 }

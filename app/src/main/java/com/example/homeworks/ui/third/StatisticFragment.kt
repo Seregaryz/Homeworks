@@ -11,13 +11,11 @@ import kotlinx.android.synthetic.main.fragment_third.*
 
 class StatisticFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View = inflater.inflate(R.layout.fragment_third, container, false)
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,7 +23,6 @@ class StatisticFragment : Fragment() {
     }
 
     companion object {
-
         fun newInstance() : StatisticFragment = StatisticFragment()
     }
 }

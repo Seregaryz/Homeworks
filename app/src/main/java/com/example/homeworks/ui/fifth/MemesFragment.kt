@@ -13,7 +13,6 @@ class MemesFragment : Fragment() {
 
     private var listener : OnFifthFragmentMoveListener? = null
 
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is OnFifthFragmentMoveListener) {
@@ -29,7 +28,6 @@ class MemesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View = inflater.inflate(R.layout.fragment_fifth, container, false)
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val first = et_first_fr_fifth?.text.toString()
@@ -40,7 +38,6 @@ class MemesFragment : Fragment() {
         }
     }
 
-
     override fun onDetach() {
         super.onDetach()
         listener = null
@@ -50,9 +47,7 @@ class MemesFragment : Fragment() {
         fun onMoveListenerFromFifth(first: String, sec: String, third: String)
     }
 
-
     companion object {
-
         fun newInstance() : MemesFragment = MemesFragment()
     }
 }

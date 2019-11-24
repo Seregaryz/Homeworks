@@ -16,7 +16,6 @@ class ReviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View = inflater.inflate(R.layout.fragment_first, container, false)
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val textFor = "Vabim"
@@ -25,7 +24,6 @@ class ReviewFragment : Fragment() {
     }
 
     companion object {
-
         fun newInstance() : ReviewFragment = ReviewFragment()
     }
 }

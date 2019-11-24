@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import com.example.homeworks.ui.fifth.MemesFragment
 import com.example.homeworks.ui.first.ReviewFragment
 import com.example.homeworks.ui.fourth.PhotoFragment
@@ -33,47 +34,19 @@ class NavigationDrawerActivity : AppCompatActivity(), PhotoFragment.OnFourthFrag
         nav_view.setNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.nav_review -> {
-                    supportFragmentManager.also {
-                        it.beginTransaction().apply {
-                            replace(R.id.container_fragment, ReviewFragment.newInstance())
-                            addToBackStack(ReviewFragment::class.java.name)
-                            drawer_layout.closeDrawer(GravityCompat.START)
-                            commit()
-                        }
-                    }
+                   moveToFragment(ReviewFragment.newInstance())
                     true
                 }
                 R.id.nav_biography -> {
-                    supportFragmentManager.also {
-                        it.beginTransaction().apply {
-                            replace(R.id.container_fragment, BiographyFragment.newInstance())
-                            addToBackStack(BiographyFragment::class.java.name)
-                            drawer_layout.closeDrawer(GravityCompat.START)
-                            commit()
-                        }
-                    }
+                    moveToFragment(BiographyFragment.newInstance())
                     true
                 }
                 R.id.nav_statistic -> {
-                    supportFragmentManager.also {
-                        it.beginTransaction().apply {
-                            replace(R.id.container_fragment, StatisticFragment.newInstance())
-                            addToBackStack(StatisticFragment::class.java.name)
-                            drawer_layout.closeDrawer(GravityCompat.START)
-                            commit()
-                        }
-                    }
+                    moveToFragment(StatisticFragment.newInstance())
                     true
                 }
                 R.id.nav_photo -> {
-                    supportFragmentManager.also {
-                        it.beginTransaction().apply {
-                            replace(R.id.container_fragment, PhotoFragment.newInstance())
-                            addToBackStack(PhotoFragment::class.java.name)
-                            drawer_layout.closeDrawer(GravityCompat.START)
-                            commit()
-                        }
-                    }
+                    moveToFragment(PhotoFragment.newInstance())
                     true
                 }
                 else -> {true}
@@ -81,7 +54,17 @@ class NavigationDrawerActivity : AppCompatActivity(), PhotoFragment.OnFourthFrag
         }
         drawer_layout.closeDrawer(GravityCompat.START)
         true
+    }
 
+    fun moveToFragment(fragment: Fragment){
+        supportFragmentManager.also {
+            it.beginTransaction().apply {
+                replace(R.id.container_fragment, fragment)
+                addToBackStack(fragment::class.java.name)
+                drawer_layout.closeDrawer(GravityCompat.START)
+                commit()
+            }
+        }
     }
 
     override fun onBackPressed() {
@@ -92,7 +75,6 @@ class NavigationDrawerActivity : AppCompatActivity(), PhotoFragment.OnFourthFrag
             else -> super.onBackPressed()
         }
     }
-
 
     override fun onMoveListenerFromFourth() {
         supportFragmentManager.also {
