@@ -8,4 +8,3 @@ class Racer(
     var points: Int,
     var imageId: Int
 )
-

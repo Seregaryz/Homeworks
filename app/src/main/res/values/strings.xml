@@ -4,7 +4,6 @@
     <string name="racer_name">Daniil Kvyat</string>
     <string name="temp_st_activity">Unknown</string>
     <string name="age_st_activity">Age:</string>
-    <string name="gp_st_activity">Granprix:</string>
     <string name="tv_grandprix">Grandprix:</string>
     <string name="tv_points">Points:</string>
 </resources>

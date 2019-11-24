@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class RacerAdapter(
     private var dataSource: List<Racer>,
-    private val clickLambda: (String,Int, String, Int, Int, Int) -> Unit
+    private val clickLambda: (Racer) -> Unit
 ) : RecyclerView.Adapter<RacerItemHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RacerItemHolder =

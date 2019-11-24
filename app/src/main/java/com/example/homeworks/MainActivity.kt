@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter = RacerAdapter(getDataSource()) { fullName, age, team, grandPrix, points, imageId ->
-            navigateToDesc(fullName, age, team, grandPrix, points, imageId)
+        adapter = RacerAdapter(getDataSource()) { racer ->
+            navigateToDesc(racer)
         }
 
         rv_racers.adapter = adapter
@@ -29,15 +29,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun navigateToDesc(
-        fullName: String,
-        age: Int,
-        team: String,
-        grandPrix: Int,
-        points: Int,
-        imageId: Int
+       racer: Racer
     ) {
-        startActivity(StatisticActivity.createIntent(this, fullName, age, team,
-            grandPrix, points, imageId))
+        startActivity(StatisticActivity.createIntent(this, racer))
     }
 
 

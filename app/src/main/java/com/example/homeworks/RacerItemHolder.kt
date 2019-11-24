@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.item_racer.*
 
 class RacerItemHolder (
     override val containerView: View,
-    private val clickLambda: (String, Int, String, Int, Int, Int) -> Unit
+    private val clickLambda: (Racer) -> Unit
 ) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
     fun bind(racer : Racer) {
@@ -19,14 +19,13 @@ class RacerItemHolder (
         img_racer.setImageResource(racer.imageId)
 
         itemView.setOnClickListener {
-            clickLambda(racer.fullName, racer.age, racer.team,
-                racer.grandPrix, racer.points, racer.imageId)
+            clickLambda(racer)
         }
     }
 
     companion object {
 
-        fun create(parent: ViewGroup, clickLambda: (String, Int, String, Int, Int, Int) -> Unit) =
+        fun create(parent: ViewGroup, clickLambda: (Racer) -> Unit) =
             RacerItemHolder(
                 LayoutInflater.from(parent.context).inflate(R.layout.item_racer, parent, false),
                 clickLambda

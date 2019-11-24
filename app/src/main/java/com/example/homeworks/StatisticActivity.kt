@@ -14,12 +14,12 @@ class StatisticActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stat)
 
-        val racer = intent?.extras?.getString(FULL_NAME) ?: "Unknown"
-        val age = intent?.extras?.getInt(RACER_AGE) ?: 20
-        val team = intent?.extras?.getString(TEAM) ?: "Unknown"
-        val grandPrix = intent?.extras?.getInt(GRANDPRIX) ?: 0
-        val points = intent?.extras?.getInt(POINTS) ?: 0
-        val imageId = intent?.extras?.getInt(IMAGE_ID) ?: 10
+        val racer = intent?.extras?.getString(EXTRA_FULL_NAME) ?: "Unknown"
+        val age = intent?.extras?.getInt(EXTRA_RACER_AGE) ?: 20
+        val team = intent?.extras?.getString(EXTRA_TEAM) ?: "Unknown"
+        val grandPrix = intent?.extras?.getInt(EXTRA_GRANDPRIX) ?: 0
+        val points = intent?.extras?.getInt(EXTRA_POINTS) ?: 0
+        val imageId = intent?.extras?.getInt(EXTRA_IMAGE_ID) ?: 10
 
         tv_name.text = racer
         tv_team.text = team
@@ -30,22 +30,21 @@ class StatisticActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val FULL_NAME = "fullName"
-        private const val RACER_AGE = "age"
-        private const val TEAM = "team"
-        private const val GRANDPRIX = "granPrix"
-        private const val POINTS = "points"
-        private const val IMAGE_ID = "image"
+        private const val EXTRA_FULL_NAME = "fullName"
+        private const val EXTRA_RACER_AGE = "age"
+        private const val EXTRA_TEAM = "team"
+        private const val EXTRA_GRANDPRIX = "granPrix"
+        private const val EXTRA_POINTS = "points"
+        private const val EXTRA_IMAGE_ID = "image"
 
-        fun createIntent(activity: Activity, fullName: String, age: Int, team: String, grandPrix: Int,
-                         points: Int, imageId: Int) =
+        fun createIntent(activity: Activity, racer: Racer) =
             Intent(activity, StatisticActivity::class.java).apply {
-                putExtra(FULL_NAME, fullName)
-                putExtra(RACER_AGE, age)
-                putExtra(TEAM, team)
-                putExtra(GRANDPRIX, grandPrix)
-                putExtra(POINTS, points)
-                putExtra(IMAGE_ID, imageId)
+                putExtra(EXTRA_FULL_NAME, racer.fullName)
+                putExtra(EXTRA_RACER_AGE, racer.age)
+                putExtra(EXTRA_TEAM, racer.team)
+                putExtra(EXTRA_GRANDPRIX, racer.grandPrix)
+                putExtra(EXTRA_POINTS, racer.points)
+                putExtra(EXTRA_IMAGE_ID, racer.imageId)
             }
     }
 }

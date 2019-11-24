@@ -8,7 +8,6 @@
     android:paddingStart="16dp"
     android:paddingEnd="16dp">
 
-
     <ImageView
         android:id="@+id/img_racer"
         android:layout_width="wrap_content"
