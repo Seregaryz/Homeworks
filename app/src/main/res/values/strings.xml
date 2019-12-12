@@ -1,14 +1,3 @@
 <resources>
     <string name="app_name">Homeworks</string>
-    <string name="tv_music_title">title</string>
-    <string name="tv_album_singer">Album and singer</string>
-    <string name="tv_singer">singer</string>
-    <string name="tv_album">album</string>
-    <string name="btn_play">play</string>
-    <string name="btn_previous">previous</string>
-    <string name="btn_next">next</string>
-    <string name="btn_pause">pause</string>
-    <string name="btn_stop">stop</string>
-    <string name="music_channel_name">music channel</string>
-    <string name="music_channel_description">description</string>
 </resources>
