@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.homeworks.ui.dashboard.DashboardFragment"
+        android:name="com.example.homeworks.ui.racer.RacersFragment"
         android:label="@string/title_racers"
         tools:layout="@layout/fragment_dashboard" />
 

@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="300dp">
-
+    android:layout_height="300dp"
+    android:padding="8dp">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_racer_name"
@@ -15,7 +15,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
         <EditText
             android:id="@+id/et_racer_name"
@@ -29,7 +28,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_racer_team"
         android:layout_width="match_parent"
@@ -38,7 +36,6 @@
         app:layout_constraintBottom_toTopOf="@+id/til_position"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
 
         <EditText
             android:id="@+id/et_racer_team"

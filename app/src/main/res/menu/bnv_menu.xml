@@ -9,12 +9,11 @@
     <item
         android:id="@+id/navigation_dashboard"
         android:title="@string/title_racers"
-        android:icon="@drawable/ic_dashboard_black_24dp"/>
+        android:icon="@drawable/ic_helmet"/>
 
     <item
         android:id="@+id/navigation_racetracks"
         android:title="@string/title_racetracks"
-        android:icon="@drawable/ic_notifications_black_24dp" />
-
+        android:icon="@drawable/ic_racetrack" />
 
 </menu>

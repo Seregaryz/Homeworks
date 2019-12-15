@@ -9,7 +9,7 @@ import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import com.example.homeworks.R
-import com.example.homeworks.ui.dashboard.Racer
+import com.example.homeworks.ui.racer.Racer
 import kotlinx.android.synthetic.main.fragment_add_dialog.view.*
 
 class AddDialogFragment(private val callback: (Racer, String) -> Unit) : DialogFragment() {
@@ -29,7 +29,7 @@ class AddDialogFragment(private val callback: (Racer, String) -> Unit) : DialogF
                         dialogView.et_racer_name?.text.toString(),
                         dialogView.et_racer_team?.text.toString()
                     ),
-                    dialogView.et_position?.text.toString()
+                    dialogView.et_position?.text?.toString() ?: "-1"
                 )
             }
             .setNegativeButton("Cancel") { _, _ ->
@@ -42,17 +42,13 @@ class AddDialogFragment(private val callback: (Racer, String) -> Unit) : DialogF
 
     }
 
-
     companion object {
 
         fun show(fragmentManager: FragmentManager,
                  callback: (Racer, String) -> Unit): AddDialogFragment =
-
             AddDialogFragment(callback).apply {
                 show(fragmentManager, AddDialogFragment::class.java.name)
             }
         }
 
     }
-
-
