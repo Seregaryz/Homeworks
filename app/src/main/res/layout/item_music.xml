@@ -5,13 +5,13 @@
     android:layout_height="88dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?android:attr/selectableItemBackground"
-    android:padding="16dp">
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/img_music"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@mipmap/biginjapan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,11 +23,11 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#31165F"
+        android:textColor="#212121"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_album"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_music"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         tools:text="@string/tv_music_title" />
@@ -36,11 +36,11 @@
         android:id="@+id/tv_album"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#403F52"
+        android:textColor="#757575"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_music"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         tools:text="@string/tv_album_singer" />
 

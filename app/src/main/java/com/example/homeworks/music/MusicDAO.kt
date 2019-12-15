@@ -5,9 +5,7 @@ import com.example.homeworks.R
 
 class MusicDAO {
 
-
     companion object{
-
         var musicList =
             getDataSource()
         var curPosition = -1

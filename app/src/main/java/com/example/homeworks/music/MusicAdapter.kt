@@ -8,7 +8,6 @@ class MusicAdapter (
     private val clickLambda: (Song) -> Unit
 ) : RecyclerView.Adapter<MusicItemHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MusicItemHolder =
         MusicItemHolder.create(
             parent,
