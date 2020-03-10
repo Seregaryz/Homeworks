@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Homeworks</string>
+    <string name="toolbar_item_search">Search</string>
+    <string name="title_weather_item">City name</string>
+    <string name="temp_weather_item">+10</string>
+    <string name="snack_message">Snack message</string>
+    <string name="grant">Grant permission</string>
+    <string name="perm">Permission isn\'t allowed</string>
+    <string name="settings">Settings</string>
+    <string name="temp_default_value">10</string>
+    <string name="plus">+</string>
+    <string name="tv_pressure_title">"Pressure: "</string>
+    <string name="tv_humidity_title">"Humidity: "</string>
+    <string name="tv_feelslike_title">"Feels like: "</string>
 </resources>
