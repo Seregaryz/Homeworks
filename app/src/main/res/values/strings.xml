@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Homeworks</string>
+    <string name="todo_item_title">title</string>
+    <string name="todo_item_description">description</string>
+    <string name="todo_item_date">24.05.2000</string>
+
+    <string name="tv_list_fragment">Hellolo</string>
+    <string name="tv_todo_fragment">ToDo</string>
 </resources>
