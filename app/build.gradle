@@ -22,9 +22,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+//    buildConfigField(
+//            "String",
+//            "API_ENDPOINT",
+//            "\"https://api.openweathermap.org/data/2.5/\""
+//    )
+//    buildConfigField(
+//            "String",
+//            "API_KEY",
+//            "\"9129fe7c4688924a4a875c03a416a42e\""
+//    )
     buildTypes.each {
-        it.buildConfigField 'String', 'API_ENDPOINT', baseUrl
-        it.buildConfigField 'String', 'API_KEY', apiKey
+        it.buildConfigField 'String', 'API_ENDPOINT', "\"https://api.openweathermap.org/data/2.5/\""
+        it.buildConfigField 'String', 'API_KEY', "\"9129fe7c4688924a4a875c03a416a42e\""
     }
     compileOptions {
         sourceCompatibility = "1.8"

@@ -37,8 +37,11 @@ class DetailsActivity : AppCompatActivity(), CoroutineScope by MainScope() {
                 }
                 tv_city?.text = response.name
                 val service = WeatherDataSetService()
-                if(response.main.temp.toInt() > 0) tv_temp.text = "+" + response.main.temp.toInt().toString()
-                else tv_temp.text = response.main.temp.toInt().toString()
+                if(response.main.temp.toInt() > 0) {
+                    tv_temp.text = "+" + response.main.temp.toInt().toString()
+                } else {
+                    tv_temp.text = response.main.temp.toInt().toString()
+                }
                 tv_temp.setTextColor(ContextCompat.getColor(this@DetailsActivity,
                     service.setTempColor(response.main.temp)))
                 tv_pressure.text = service.getDirection(response.wind.deg) + " " +  response.wind.deg
@@ -74,7 +77,7 @@ class DetailsActivity : AppCompatActivity(), CoroutineScope by MainScope() {
                     }
                     //Toast.makeText(this@MainActivity, response.toString(), Toast.LENGTH_LONG).show()
                     tv_city?.text = response.name
-                    tv_temp.text = response.main.toString()
+                    tv_temp.text = response.main.temp.toInt().toString()
                 } catch (ex:IOException){
                     Snackbar.make(findViewById(android.R.id.content), "No such city was found", Snackbar.LENGTH_LONG)
                         .show()

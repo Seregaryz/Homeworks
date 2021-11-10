@@ -17,7 +17,7 @@ class WeatherDataSetService {
         }
     }
 
-    fun getDirection(deg: Int): String{
+    fun getDirection(deg: Double): String{
         return if (deg >= 337.5 && deg <= 22.5) "N"
         else return if (deg > 22.5 && deg < 67.5) "NE"
         else return if (deg >= 67.5 && deg <= 112.5) "E"
